@@ -125,5 +125,6 @@ p {
     }
     .text-container {
         padding: 2px;
+        line-height: 1.4;
     }
 }
