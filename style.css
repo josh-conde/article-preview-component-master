@@ -127,4 +127,9 @@ p {
         padding: 2px;
         line-height: 1.4;
     }
+    .img-container img {
+        height: 300px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
 }
