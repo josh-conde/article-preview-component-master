@@ -22,6 +22,10 @@ html {
     line-height: 1.5;
 }
 
+a {
+    text-decoration: none;
+}
+
 h1 {
     color: var(--color-bluegray);
     font-weight: 700;
@@ -96,6 +100,7 @@ p {
     width: 25px;
     height: 25px;
     cursor: pointer;
+    color: #fff;
 }
 
 #share-btn img {
@@ -105,15 +110,39 @@ p {
 .contact-right-container #share-content {
     display: none;
     background-color: var(--color-darkblue);
-    z-index: 10;
     color: #fff;
-    float: top;
+    position: relative;
     z-index: 10;
+    
+}
+.contact-right-container #share-content p{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+    margin-right: 10px; 
 }
 
-.contact-right-container #share-content .active {
-    display: block;
+.contact-right-container #share-content.active {
+    display: inline-grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 15px;
+    position: absolute;
+    margin-left: -140px;
+    margin-top: -60px; 
+    z-index: 11; 
+    border-radius: 4px; 
+    width: 200px;
 }
+
+#share-btn:hover {
+    background-color: var(--color-darkblue);
+}
+
+#share-btn img:hover {
+    color: #fff;
+}
+
 
 @media (max-width: 375px ) {
     .main-container {
@@ -132,5 +161,8 @@ p {
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
         border-bottom-left-radius: 0;
+    }
+    .contact-right-container #share-content.active {
+        margin-left: -180px;
     }
 }
